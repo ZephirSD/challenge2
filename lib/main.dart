@@ -82,29 +82,26 @@ class _Challenge2State extends State<Challenge2> {
               ),
             ),
           ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.all(15),
-              child: FlatButton(
-                color: Colors.blue,
-                onPressed: () {
-                  choixValue2();
-                },
-                child: Text(
-                  listeChoix.getChoix2(),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
+          Visibility(
+            visible: listeChoix.getChoix2() != "",
+            child: Expanded(
+              child: Padding(
+                padding: EdgeInsets.all(15),
+                child: FlatButton(
+                  color: Colors.blue,
+                  onPressed: () {
+                    choixValue2();
+                  },
+                  child: Text(
+                    listeChoix.getChoix2(),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
                   ),
                 ),
               ),
-            ),
-          ),
-          SizedBox(
-            child: Padding(
-              padding: EdgeInsets.all(25),
-              child: Row(),
             ),
           ),
         ],

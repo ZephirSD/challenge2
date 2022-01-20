@@ -1,3 +1,7 @@
+import 'dart:html';
+
+import 'package:flutter/material.dart';
+
 import 'choix.dart';
 
 class Base {
@@ -73,6 +77,5 @@ class Base {
         numberChoix = 4;
       }
     }
-    print(question.length);
   }
 }
