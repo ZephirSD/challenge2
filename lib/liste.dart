@@ -42,11 +42,9 @@ class Base {
     if (numberChoix < question.length - 1) {
       if (questionNum == 0) {
         numberChoix = 2;
-      }
-      if (questionNum == 1) {
+      } else if (questionNum == 1) {
         numberChoix = 2;
-      }
-      if (questionNum == 2) {
+      } else if (questionNum == 2) {
         numberChoix = 5;
       }
     }
@@ -65,11 +63,9 @@ class Base {
     if (numberChoix < question.length - 1) {
       if (questionNum == 0) {
         numberChoix = 1;
-      }
-      if (questionNum == 1) {
+      } else if (questionNum == 1) {
         numberChoix = 3;
-      }
-      if (questionNum == 2) {
+      } else if (questionNum == 2) {
         numberChoix = 4;
       }
     }
