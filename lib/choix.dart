@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class Choix {
   String questions;
   String choix1;

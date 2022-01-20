@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'choix.dart';
 
 class Base {
@@ -36,5 +35,44 @@ class Base {
 
   String getChoix2() {
     return question[numberChoix].choix2;
+  }
+
+  controlChoix1(int questionNum) {
+    questionNum = numberChoix;
+    if (numberChoix < question.length - 1) {
+      if (questionNum == 0) {
+        numberChoix = 2;
+      }
+      if (questionNum == 1) {
+        numberChoix = 2;
+      }
+      if (questionNum == 2) {
+        numberChoix = 5;
+      }
+    }
+    recommencer() {
+      String recomString = question[questionNum].choix1;
+      if (recomString == 'Recommencer') {
+        numberChoix = 0;
+      }
+    }
+
+    recommencer();
+  }
+
+  controlChoix2(int questionNum) {
+    questionNum = numberChoix;
+    if (numberChoix < question.length - 1) {
+      if (questionNum == 0) {
+        numberChoix = 1;
+      }
+      if (questionNum == 1) {
+        numberChoix = 3;
+      }
+      if (questionNum == 2) {
+        numberChoix = 4;
+      }
+    }
+    print(question.length);
   }
 }
