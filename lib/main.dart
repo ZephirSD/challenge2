@@ -57,7 +57,7 @@ class _Challenge2State extends State<Challenge2> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                       color: Colors.white,
-                      fontSize: 25,
+                      fontSize: 24,
                       decoration: TextDecoration.none),
                 ),
               ),
