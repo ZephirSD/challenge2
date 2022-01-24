@@ -1,8 +1,8 @@
 import 'choix.dart';
 
-class Base {
+class Questions {
   int numberChoix = 0;
-  List<Choix> question = [
+  List<Choix> questions = [
     Choix(
         "Vous venez de crevez un pneu à St André. Vous n'avez pas de téléphone vous décidez de faire du stop. Une ford fiesta rouge s'arrête et le conducteur vous demande si vous voulez qu'il vous dépanne.",
         "Vous lui remerciez et vous montez dans la voiture",
@@ -26,48 +26,43 @@ class Base {
         ""),
   ];
   String getQuestionsChoix() {
-    return question[numberChoix].questions;
+    return questions[numberChoix].question;
   }
 
   String getChoix1() {
-    return question[numberChoix].choix1;
+    return questions[numberChoix].choix1;
   }
 
   String getChoix2() {
-    return question[numberChoix].choix2;
+    return questions[numberChoix].choix2;
   }
 
-  controlChoix1(int questionNum) {
-    questionNum = numberChoix;
-    if (numberChoix < question.length - 1) {
-      if (questionNum == 0) {
-        numberChoix = 2;
-      } else if (questionNum == 1) {
-        numberChoix = 2;
-      } else if (questionNum == 2) {
-        numberChoix = 5;
-      }
+  controlChoix1() {
+    if (numberChoix == 0) {
+      numberChoix = 2;
+    } else if (numberChoix == 1) {
+      numberChoix = 2;
+    } else if (numberChoix == 2) {
+      numberChoix = 5;
+    } else if (numberChoix == 5 || numberChoix == 4 || numberChoix == 3) {
+      recommencer();
     }
-    recommencer() {
-      String recomString = question[questionNum].choix1;
-      if (recomString == 'Recommencer') {
-        numberChoix = 0;
-      }
-    }
-
-    recommencer();
   }
 
-  controlChoix2(int questionNum) {
-    questionNum = numberChoix;
-    if (numberChoix < question.length - 1) {
-      if (questionNum == 0) {
-        numberChoix = 1;
-      } else if (questionNum == 1) {
-        numberChoix = 3;
-      } else if (questionNum == 2) {
-        numberChoix = 4;
-      }
+  recommencer() {
+    String recomString = questions[numberChoix].choix1;
+    if (recomString == "Recommencer") {
+      numberChoix = 0;
+    }
+  }
+
+  controlChoix2() {
+    if (numberChoix == 0) {
+      numberChoix = 1;
+    } else if (numberChoix == 1) {
+      numberChoix = 3;
+    } else if (numberChoix == 2) {
+      numberChoix = 4;
     }
   }
 }

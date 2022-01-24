@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'liste.dart';
 
-Base listeChoix = Base();
+Questions listeChoix = Questions();
 
 void main() => runApp(Challenge());
 
@@ -28,18 +28,6 @@ class Challenge2 extends StatefulWidget {
 }
 
 class _Challenge2State extends State<Challenge2> {
-  void choixValue1() {
-    setState(() {
-      listeChoix.controlChoix1(listeChoix.numberChoix);
-    });
-  }
-
-  void choixValue2() {
-    setState(() {
-      listeChoix.controlChoix2(listeChoix.numberChoix);
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -69,7 +57,9 @@ class _Challenge2State extends State<Challenge2> {
               child: FlatButton(
                 color: Colors.blue,
                 onPressed: () {
-                  choixValue1();
+                  setState(() {
+                    listeChoix.controlChoix1();
+                  });
                 },
                 child: Text(
                   listeChoix.getChoix1(),
@@ -90,7 +80,9 @@ class _Challenge2State extends State<Challenge2> {
                 child: FlatButton(
                   color: Colors.blue,
                   onPressed: () {
-                    choixValue2();
+                    setState(() {
+                      listeChoix.controlChoix2();
+                    });
                   },
                   child: Text(
                     listeChoix.getChoix2(),
